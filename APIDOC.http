@@ -1,0 +1,120 @@
+### Api call for create user
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "database",
+    "email" : "data@gamil.com",
+    "phone" : 123445689,
+    "password" : "password@123"
+}
+
+### Api call for Retrive user
+GET http://127.0.0.1:8000/retriveuser/1/
+Accept: application/json
+Authorization: Token 26b475ec8dc7be1058a48147b3d2880f718b419e
+
+# database - 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+# python - 26b475ec8dc7be1058a48147b3d2880f718b419e
+# django - 03f967c2364fd95d37e0acdd37923b8480c3f04a
+# react - fae0681942a1689f29f695c7ccd305811cbeb03d
+### Api call for create Token
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username" : "database",
+    "password" : "password@123"
+}
+
+### Api call for create Profile
+POST http://127.0.0.1:8000/profile/
+Content-Type: application/json
+Authorization: Token 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+
+{
+    "height" : 165,
+    "weight" : 62,
+    "age" : 21,
+    "gender" : "male"
+}
+
+### Api call get userProfile Details
+GET http://127.0.0.1:8000/profiledetail/
+Accept: application/json
+Authorization: Token 26b475ec8dc7be1058a48147b3d2880f718b419e
+
+### Api call for Retrive userProfile
+GET http://127.0.0.1:8000/profileretrive/2/
+Accept: application/json
+Authorization: Token 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+
+### Api call for Update user Profile
+PUT http://127.0.0.1:8000/profileretrive/2/
+Content-Type: application/json
+Authorization: Token 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+
+{
+  "height": 168.0,
+  "weight": 62.0,
+  "age": 21,
+  "gender": "male",
+  "activity_level": "1.2"
+}
+
+
+### APi call for create Food Log
+POST http://127.0.0.1:8000/foodlog/
+Content-Type: application/json
+Authorization: Token 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+
+  {
+    "name": "Apple",
+    "meal_type": "snack",
+    "calories": 95,
+    "serving_size": "1 medium"
+  }
+
+### Api call for listing Food logs
+GET http://127.0.0.1:8000/foodlog/
+Accept: application/json
+Authorization: Token 26b475ec8dc7be1058a48147b3d2880f718b419e
+
+### Api call for Retrive food Log
+GET http://127.0.0.1:8000/foodlog/1/
+Accept: application/json
+Authorization: Token 26b475ec8dc7be1058a48147b3d2880f718b419e
+
+### Api call for Update Food Logs
+PUT http://127.0.0.1:8000/foodlog/1/
+Content-Type: application/json
+Authorization: Token 26b475ec8dc7be1058a48147b3d2880f718b419e
+
+  {
+    "name": "Vegetable Salad",
+    "meal_type": "lunch",
+    "calories": 180,
+    "serving_size": "1 bowl"
+  }
+
+### APi call for Destroy Food log
+DELETE http://127.0.0.1:8000/foodlog/3/
+Authorization: Token 26b475ec8dc7be1058a48147b3d2880f718b419e
+
+
+### APi call for Get summary
+GET http://127.0.0.1:8000/summary/
+Accept: application/json
+Authorization: Token 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+
+
+### Api call for Diet Plan
+POST http://127.0.0.1:8000/diet-plan/
+Content-Type: application/json
+Authorization: Token 9e4fff3cfd1315ec4b4a28f86e7396439f6888a6
+
+{
+  "goal" : "weight loss",
+  "target_weight" : 68,
+  "duration" : 3
+}
